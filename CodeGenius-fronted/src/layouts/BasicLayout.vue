@@ -1,29 +1,6 @@
-<script setup lang="ts">
-import { Layout } from 'ant-design-vue'
-import GlobalHeader from '../components/layout/GlobalHeader.vue'
-import GlobalFooter from '../components/layout/GlobalFooter.vue'
-
-const menus = [
-  {
-    key: 'home',
-    title: '首页',
-    path: '/'
-  },
-  {
-    key: 'about',
-    title: '关于',
-    path: '/about'
-  }, {
-    key: 'demo',
-    title: 'demo',
-    path: '/demo'
-  }
-]
-</script>
-
 <template>
   <Layout class="basic-layout">
-    <GlobalHeader :menus="menus" />
+    <GlobalHeader />
     <Layout.Content class="content">
       <div class="content-inner">
         <router-view />
@@ -32,6 +9,13 @@ const menus = [
     <GlobalFooter />
   </Layout>
 </template>
+
+<script setup lang="ts">
+import { Layout } from 'ant-design-vue'
+import GlobalHeader from '../components/layout/GlobalHeader.vue'
+import GlobalFooter from '../components/layout/GlobalFooter.vue'
+
+</script>
 
 <style scoped>
 .basic-layout {
@@ -64,4 +48,4 @@ const menus = [
     margin: 16px 0;
   }
 }
-</style> 
+</style>

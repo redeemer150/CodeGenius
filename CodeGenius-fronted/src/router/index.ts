@@ -4,25 +4,46 @@ import HomeView from '../views/HomeView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // ==================== 基础页面路由 ====================
     {
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: { title: '首页' }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
-    },{
-      path: '/demo',
-      name: 'demo',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/demo.vue'),
+      meta: { title: '关于' }
+    },
+
+    // ==================== 用户相关路由 (/user) ====================
+    {
+      path: '/user/login',
+      name: 'userLogin',
+      component: () => import('@/views/user/UserLogin.vue'),
+      meta: { title: '用户登录', requiresAuth: false }
+    },
+    {
+      path: '/user/register',
+      name: 'userRegister',
+      component: () => import('@/views/user/UserRegister.vue'),
+      meta: { title: '用户注册', requiresAuth: false }
+    },
+
+    // ==================== 管理员路由 (/admin) ====================
+    {
+      path: '/admin/userManage',
+      name: 'adminUserManage',
+      component: () => import('../views/user/UserManage.vue'),
+      meta: { title: '用户管理', requiresAuth: true, requiresAdmin: true }
+    },
+    {
+      path: '/admin/appManage',
+      name: 'adminAppManage',
+      component: () => import('../views/app/AppManage.vue'),
+      meta: { title: '应用管理', requiresAuth: true, requiresAdmin: true }
     },
   ],
 })

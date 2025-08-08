@@ -15,6 +15,7 @@ import com.redeemer150.CodeGenius.model.vo.LoginUserVO;
 import com.redeemer150.CodeGenius.model.vo.UserVO;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +31,7 @@ import java.util.List;
  *
  * @author <a href="https://github.com/redeemer150">程序员鱼皮</a>
  */
+@Slf4j
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -45,11 +47,13 @@ public class UserController {
      */
     @PostMapping("/register")
     public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
+        log.info("用户注册请求：userAccount={}", userRegisterRequest != null ? userRegisterRequest.getUserAccount() : "null");
         ThrowUtils.throwIf(userRegisterRequest == null, ErrorCode.PARAMS_ERROR);
         String userAccount = userRegisterRequest.getUserAccount();
         String userPassword = userRegisterRequest.getUserPassword();
         String checkPassword = userRegisterRequest.getCheckPassword();
         long result = userService.userRegister(userAccount, userPassword, checkPassword);
+        log.info("用户注册成功：userId={}", result);
         return ResultUtils.success(result);
     }
 
@@ -62,10 +66,12 @@ public class UserController {
      */
     @PostMapping("/login")
     public BaseResponse<LoginUserVO> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) {
+        log.info("用户登录请求：userAccount={}", userLoginRequest != null ? userLoginRequest.getUserAccount() : "null");
         ThrowUtils.throwIf(userLoginRequest == null, ErrorCode.PARAMS_ERROR);
         String userAccount = userLoginRequest.getUserAccount();
         String userPassword = userLoginRequest.getUserPassword();
         LoginUserVO loginUserVO = userService.userLogin(userAccount, userPassword, request);
+        log.info("用户登录成功：userId={}", loginUserVO.getId());
         return ResultUtils.success(loginUserVO);
     }
 

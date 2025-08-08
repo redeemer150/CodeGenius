@@ -1,0 +1,383 @@
+2025-08-08 17:19:28.454 [main] INFO  c.r.CodeGenius.CodeGeniusApplication - Starting CodeGeniusApplication using Java 21.0.7 with PID 97660 (D:\code\2025项目（正在使用）\分布式\CodeGenius\CodeGenius-backend\target\classes started by ASUS in D:\code\2025项目（正在使用）\分布式\CodeGenius\CodeGenius-backend)
+2025-08-08 17:19:28.456 [main] DEBUG c.r.CodeGenius.CodeGeniusApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 17:19:28.457 [main] INFO  c.r.CodeGenius.CodeGeniusApplication - The following 1 profile is active: "local"
+2025-08-08 17:19:29.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-08 17:19:29.417 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-08 17:19:29.458 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-08-08 17:19:30.226 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8123 (http)
+2025-08-08 17:19:30.241 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8123"]
+2025-08-08 17:19:30.242 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 17:19:30.242 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 17:19:30.315 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-08-08 17:19:30.315 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1814 ms
+2025-08-08 17:19:30.875 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@36baf30c
+2025-08-08 17:19:31.100 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-08-08 17:19:31.101 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-08-08 17:19:31.103 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2025-08-08 17:19:31.103 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2025-08-08 17:19:31.103 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2025-08-08 17:19:31.103 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2025-08-08 17:19:31.103 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2025-08-08 17:19:31.104 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2025-08-08 17:19:31.104 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2025-08-08 17:19:31.104 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2025-08-08 17:19:31.105 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2025-08-08 17:19:31.105 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{password=<masked>}
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2025-08-08 17:19:31.106 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://localhost:3306/yu_ai_code_mother
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................10
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................10
+2025-08-08 17:19:31.107 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2025-08-08 17:19:31.108 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2025-08-08 17:19:31.109 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"root"
+2025-08-08 17:19:31.109 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2025-08-08 17:19:31.109 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-08 17:19:31.395 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@393bcd6b
+2025-08-08 17:19:31.397 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-08 17:19:31.496 [main] INFO  c.r.C.a.AiCodeGeneratorServiceFactory - 为 appId: 0 创建新的 AI 服务实例
+2025-08-08 17:19:31.499 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-08-08 17:19:31.516 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d3625f
+2025-08-08 17:19:31.529 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1339f4e5
+2025-08-08 17:19:31.542 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6266e0cb
+2025-08-08 17:19:31.555 [main] DEBUG c.r.C.m.C.selectListByQuery - ==>  Preparing: SELECT `id`, `message`, `messageType`, `appId`, `userId`, `createTime`, `updateTime`, `isDelete` FROM `chat_history` WHERE (`appId` = ?) AND `isDelete` = ? ORDER BY `createTime` DESC LIMIT 1, 20
+2025-08-08 17:19:31.555 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46b031c9
+2025-08-08 17:19:31.568 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e32a6d
+2025-08-08 17:19:31.584 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f8bd70c
+2025-08-08 17:19:31.589 [main] DEBUG c.r.C.m.C.selectListByQuery - ==> Parameters: 0(Long), 0(Integer)
+2025-08-08 17:19:31.596 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6176dda5
+2025-08-08 17:19:31.609 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28e97479
+2025-08-08 17:19:31.616 [main] DEBUG c.r.C.m.C.selectListByQuery - <==      Total: 0
+2025-08-08 17:19:31.625 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b31d472
+2025-08-08 17:19:31.625 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:19:31.819 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-08-08 17:19:32.169 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-08-08 17:19:32.473 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8123"]
+2025-08-08 17:19:32.485 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8123 (http) with context path '/api'
+2025-08-08 17:19:32.496 [main] INFO  c.r.CodeGenius.CodeGeniusApplication - Started CodeGeniusApplication in 4.676 seconds (process running for 5.659)
+2025-08-08 17:19:32.499 [main] INFO  o.s.b.a.b.JobLauncherApplicationRunner - Running default command line with: []
+2025-08-08 17:20:01.511 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:20:01.511 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:20:31.520 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:20:31.520 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:21:01.534 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:21:01.534 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:21:01.823 [http-nio-8123-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-08 17:21:01.824 [http-nio-8123-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-08 17:21:01.825 [http-nio-8123-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-08 17:21:02.063 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:21:02.063 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:21:02.073 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:21:02.086 [http-nio-8123-exec-2] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:21:02.088 [http-nio-8123-exec-2] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:21:02.091 [http-nio-8123-exec-2] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:21:02.091 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==>  Preparing: SELECT `id`, `userAccount`, `userPassword`, `userName`, `userAvatar`, `userProfile`, `userRole`, `editTime`, `createTime`, `updateTime`, `isDelete` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ? ORDER BY null DESC LIMIT 0, 10
+2025-08-08 17:21:02.093 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:21:02.095 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectListByQuery - <==      Total: 1
+2025-08-08 17:21:31.539 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:21:31.539 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:22:01.543 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:22:01.543 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:22:31.559 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:22:31.559 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:23:01.565 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:23:01.565 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:23:31.566 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:23:31.566 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:24:01.569 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:24:01.569 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:24:03.030 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:24:03.031 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:24:03.034 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:24:34.547 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:24:34.548 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:24:34.553 [http-nio-8123-exec-6] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:24:34.554 [http-nio-8123-exec-6] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:24:34.557 [http-nio-8123-exec-6] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:24:34.559 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==>  Preparing: SELECT `id`, `userAccount`, `userPassword`, `userName`, `userAvatar`, `userProfile`, `userRole`, `editTime`, `createTime`, `updateTime`, `isDelete` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ? ORDER BY null DESC LIMIT 0, 10
+2025-08-08 17:24:34.562 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:24:34.567 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectListByQuery - <==      Total: 1
+2025-08-08 17:25:14.523 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:25:14.524 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:26:28.421 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s897ms829µs200ns).
+2025-08-08 17:26:28.421 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:26:28.421 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:26:31.395 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:26:31.396 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:26:31.398 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:27:23.729 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s308ms150µs900ns).
+2025-08-08 17:27:23.731 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:27:23.732 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:28:30.386 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s656ms770µs300ns).
+2025-08-08 17:28:30.387 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:28:30.387 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:28:41.460 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:28:41.462 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %122%(String), %%(String), 0(Integer)
+2025-08-08 17:28:41.464 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:29:09.124 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:29:09.125 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:29:39.136 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:29:39.136 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:30:09.146 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:30:09.146 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:30:39.150 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:30:39.150 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:31:09.153 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:31:09.153 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:31:39.163 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:31:39.163 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:32:09.174 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:32:09.174 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:32:39.181 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:32:39.181 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:33:09.193 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:33:09.193 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:33:39.200 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:33:39.200 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:34:09.208 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:34:09.208 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:34:31.474 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:34:31.475 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:34:31.478 [http-nio-8123-exec-2] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:34:43.695 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:34:43.696 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:37:22.292 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m38s597ms209µs300ns).
+2025-08-08 17:37:22.292 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:37:22.292 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:37:22.297 [http-nio-8123-exec-2] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:37:22.300 [http-nio-8123-exec-2] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %122%(String), %%(String), 0(Integer)
+2025-08-08 17:37:22.306 [http-nio-8123-exec-2] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:37:22.663 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-08 17:37:22.677 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-08 17:37:22.681 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-08 17:37:22.682 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:37:22.683 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@393bcd6b: (connection evicted)
+2025-08-08 17:37:22.684 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@67d3625f: (connection evicted)
+2025-08-08 17:37:22.686 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1339f4e5: (connection evicted)
+2025-08-08 17:37:22.686 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6266e0cb: (connection evicted)
+2025-08-08 17:37:22.687 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@46b031c9: (connection evicted)
+2025-08-08 17:37:22.688 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1e32a6d: (connection evicted)
+2025-08-08 17:37:22.689 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7f8bd70c: (connection evicted)
+2025-08-08 17:37:22.690 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6176dda5: (connection evicted)
+2025-08-08 17:37:22.691 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@28e97479: (connection evicted)
+2025-08-08 17:37:22.691 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5b31d472: (connection evicted)
+2025-08-08 17:37:22.691 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-08-08 17:37:22.691 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-08 17:37:29.186 [main] INFO  c.r.CodeGenius.CodeGeniusApplication - Starting CodeGeniusApplication using Java 21.0.7 with PID 97456 (D:\code\2025项目（正在使用）\分布式\CodeGenius\CodeGenius-backend\target\classes started by ASUS in D:\code\2025项目（正在使用）\分布式\CodeGenius\CodeGenius-backend)
+2025-08-08 17:37:29.187 [main] DEBUG c.r.CodeGenius.CodeGeniusApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-08-08 17:37:29.188 [main] INFO  c.r.CodeGenius.CodeGeniusApplication - The following 1 profile is active: "local"
+2025-08-08 17:37:30.126 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-08 17:37:30.129 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-08 17:37:30.172 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-08-08 17:37:30.960 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8123 (http)
+2025-08-08 17:37:30.975 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8123"]
+2025-08-08 17:37:30.977 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-08 17:37:30.977 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08 17:37:31.051 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-08-08 17:37:31.052 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1819 ms
+2025-08-08 17:37:31.588 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@36baf30c
+2025-08-08 17:37:31.802 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-08-08 17:37:31.803 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2025-08-08 17:37:31.805 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension................................false
+2025-08-08 17:37:31.805 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit................................true
+2025-08-08 17:37:31.805 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog................................none
+2025-08-08 17:37:31.805 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql................................none
+2025-08-08 17:37:31.806 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery................................none
+2025-08-08 17:37:31.807 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout................................30000
+2025-08-08 17:37:31.807 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource................................none
+2025-08-08 17:37:31.807 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName................................none
+2025-08-08 17:37:31.808 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI................................none
+2025-08-08 17:37:31.808 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties................................{password=<masked>}
+2025-08-08 17:37:31.808 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................................"com.mysql.cj.jdbc.Driver"
+2025-08-08 17:37:31.808 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName................................none
+2025-08-08 17:37:31.808 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties................................{}
+2025-08-08 17:37:31.809 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry................................none
+2025-08-08 17:37:31.809 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout................................600000
+2025-08-08 17:37:31.809 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout................................1
+2025-08-08 17:37:31.809 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries................................false
+2025-08-08 17:37:31.809 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl................................jdbc:mysql://localhost:3306/yu_ai_code_mother
+2025-08-08 17:37:31.809 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime................................0
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold................................0
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime................................1800000
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize................................10
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry................................none
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory................................none
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle................................10
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - password................................<masked>
+2025-08-08 17:37:31.810 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName................................"HikariPool-1"
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly................................false
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans................................false
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor................................none
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema................................none
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory................................internal
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation................................default
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - username................................"root"
+2025-08-08 17:37:31.811 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout................................5000
+2025-08-08 17:37:31.812 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-08 17:37:32.100 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42c55978
+2025-08-08 17:37:32.102 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-08 17:37:32.215 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-08-08 17:37:32.217 [main] INFO  c.r.C.a.AiCodeGeneratorServiceFactory - 为 appId: 0 创建新的 AI 服务实例
+2025-08-08 17:37:32.230 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e6892ef
+2025-08-08 17:37:32.241 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a1b2d31
+2025-08-08 17:37:32.254 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@392f1e35
+2025-08-08 17:37:32.266 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0b53f5
+2025-08-08 17:37:32.273 [main] DEBUG c.r.C.m.C.selectListByQuery - ==>  Preparing: SELECT `id`, `message`, `messageType`, `appId`, `userId`, `createTime`, `updateTime`, `isDelete` FROM `chat_history` WHERE (`appId` = ?) AND `isDelete` = ? ORDER BY `createTime` DESC LIMIT 1, 20
+2025-08-08 17:37:32.278 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45d26c3e
+2025-08-08 17:37:32.291 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58121d1a
+2025-08-08 17:37:32.301 [main] DEBUG c.r.C.m.C.selectListByQuery - ==> Parameters: 0(Long), 0(Integer)
+2025-08-08 17:37:32.303 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ff46a15
+2025-08-08 17:37:32.315 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@606e353b
+2025-08-08 17:37:32.350 [main] DEBUG c.r.C.m.C.selectListByQuery - <==      Total: 0
+2025-08-08 17:37:32.350 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71eb72ff
+2025-08-08 17:37:32.350 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=1, idle=9, waiting=0)
+2025-08-08 17:37:32.581 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-08-08 17:37:32.901 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2025-08-08 17:37:33.186 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8123"]
+2025-08-08 17:37:33.197 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8123 (http) with context path '/api'
+2025-08-08 17:37:33.207 [main] INFO  c.r.CodeGenius.CodeGeniusApplication - Started CodeGeniusApplication in 4.642 seconds (process running for 5.591)
+2025-08-08 17:37:33.210 [main] INFO  o.s.b.a.b.JobLauncherApplicationRunner - Running default command line with: []
+2025-08-08 17:38:02.228 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:38:02.228 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:38:22.898 [http-nio-8123-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-08 17:38:22.898 [http-nio-8123-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-08 17:38:22.899 [http-nio-8123-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-08 17:38:23.135 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:38:23.136 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:38:23.145 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:38:43.637 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:38:43.638 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:39:13.726 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:39:13.727 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:39:43.889 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:39:43.890 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:39:43.920 [http-nio-8123-exec-3] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:39:43.929 [http-nio-8123-exec-3] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %122%(String), %%(String), 0(Integer)
+2025-08-08 17:39:43.934 [http-nio-8123-exec-3] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:48:47.762 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m3s866ms207µs600ns).
+2025-08-08 17:48:47.767 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:48:47.767 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:49:00.180 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:49:00.182 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:49:00.186 [http-nio-8123-exec-6] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:49:02.073 [http-nio-8123-exec-6] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:49:02.074 [http-nio-8123-exec-6] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %122%(String), %%(String), 0(Integer)
+2025-08-08 17:49:02.076 [http-nio-8123-exec-6] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:49:17.780 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:49:17.780 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:49:22.205 [http-nio-8123-exec-7] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:49:22.206 [http-nio-8123-exec-7] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:49:22.208 [http-nio-8123-exec-7] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:49:24.243 [http-nio-8123-exec-7] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userRole = ? AND userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:49:24.243 [http-nio-8123-exec-7] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: user(String), %122%(String), %%(String), 0(Integer)
+2025-08-08 17:49:24.245 [http-nio-8123-exec-7] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:49:47.786 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:49:47.786 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:50:09.221 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:50:09.222 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:50:09.225 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:50:09.227 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userRole = ? AND userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:50:09.227 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: user(String), %122%(String), %%(String), 0(Integer)
+2025-08-08 17:50:09.230 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:50:16.303 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:50:16.303 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:50:16.305 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:50:16.307 [http-nio-8123-exec-1] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:50:16.307 [http-nio-8123-exec-1] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %%(String), %%(String), 0(Integer)
+2025-08-08 17:50:16.310 [http-nio-8123-exec-1] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:50:16.312 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==>  Preparing: SELECT `id`, `userAccount`, `userPassword`, `userName`, `userAvatar`, `userProfile`, `userRole`, `editTime`, `createTime`, `updateTime`, `isDelete` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ? ORDER BY null DESC LIMIT 0, 10
+2025-08-08 17:50:16.312 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==> Parameters: %%(String), %%(String), 0(Integer)
+2025-08-08 17:50:16.315 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectListByQuery - <==      Total: 2
+2025-08-08 17:50:17.793 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:50:17.793 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:50:18.664 [http-nio-8123-exec-4] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:50:18.666 [http-nio-8123-exec-4] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:50:18.668 [http-nio-8123-exec-4] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:50:18.669 [http-nio-8123-exec-4] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:50:18.669 [http-nio-8123-exec-4] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:50:18.671 [http-nio-8123-exec-4] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:50:18.672 [http-nio-8123-exec-4] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==>  Preparing: SELECT `id`, `userAccount`, `userPassword`, `userName`, `userAvatar`, `userProfile`, `userRole`, `editTime`, `createTime`, `updateTime`, `isDelete` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ? ORDER BY null DESC LIMIT 0, 10
+2025-08-08 17:50:18.672 [http-nio-8123-exec-4] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:50:18.674 [http-nio-8123-exec-4] DEBUG c.r.C.m.UserMapper.selectListByQuery - <==      Total: 1
+2025-08-08 17:50:37.029 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:50:37.030 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:50:37.031 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:50:37.033 [http-nio-8123-exec-3] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:50:37.034 [http-nio-8123-exec-3] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:50:37.036 [http-nio-8123-exec-3] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:50:37.037 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==>  Preparing: SELECT `id`, `userAccount`, `userPassword`, `userName`, `userAvatar`, `userProfile`, `userRole`, `editTime`, `createTime`, `updateTime`, `isDelete` FROM `user` WHERE (userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ? ORDER BY null DESC LIMIT 0, 10
+2025-08-08 17:50:37.037 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==> Parameters: %1%(String), %%(String), 0(Integer)
+2025-08-08 17:50:37.040 [http-nio-8123-exec-3] DEBUG c.r.C.m.UserMapper.selectListByQuery - <==      Total: 1
+2025-08-08 17:50:47.793 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:50:47.793 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:50:55.670 [http-nio-8123-exec-7] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:50:55.670 [http-nio-8123-exec-7] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:50:55.673 [http-nio-8123-exec-7] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:50:55.674 [http-nio-8123-exec-7] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userRole = ? AND userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:50:55.674 [http-nio-8123-exec-7] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: user(String), %1%(String), %%(String), 0(Integer)
+2025-08-08 17:50:55.676 [http-nio-8123-exec-7] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:51:02.275 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:51:02.275 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:51:02.277 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:51:02.279 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userRole = ? AND userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:51:02.279 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: admin(String), %1%(String), %%(String), 0(Integer)
+2025-08-08 17:51:02.281 [http-nio-8123-exec-9] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:51:02.283 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==>  Preparing: SELECT `id`, `userAccount`, `userPassword`, `userName`, `userAvatar`, `userProfile`, `userRole`, `editTime`, `createTime`, `updateTime`, `isDelete` FROM `user` WHERE (userRole = ? AND userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ? ORDER BY null DESC LIMIT 0, 10
+2025-08-08 17:51:02.283 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectListByQuery - ==> Parameters: admin(String), %1%(String), %%(String), 0(Integer)
+2025-08-08 17:51:02.285 [http-nio-8123-exec-9] DEBUG c.r.C.m.UserMapper.selectListByQuery - <==      Total: 1
+2025-08-08 17:51:17.807 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:51:17.807 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:51:47.820 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:51:47.820 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:52:01.149 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectOneById - ==>  Preparing: SELECT * FROM `user` WHERE `id` = ? AND `isDelete` = 0
+2025-08-08 17:52:01.150 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectOneById - ==> Parameters: 309911162314326016(Long)
+2025-08-08 17:52:01.152 [http-nio-8123-exec-1] DEBUG c.r.C.m.UserMapper.selectOneById - <==      Total: 1
+2025-08-08 17:52:01.153 [http-nio-8123-exec-1] DEBUG c.r.C.m.U.selectObjectListByQuery - ==>  Preparing: SELECT COUNT(*) AS `total` FROM `user` WHERE (userRole = ? AND userAccount LIKE ? AND userName LIKE ?) AND `isDelete` = ?
+2025-08-08 17:52:01.154 [http-nio-8123-exec-1] DEBUG c.r.C.m.U.selectObjectListByQuery - ==> Parameters: admin(String), %2%(String), %%(String), 0(Integer)
+2025-08-08 17:52:01.155 [http-nio-8123-exec-1] DEBUG c.r.C.m.U.selectObjectListByQuery - <==      Total: 1
+2025-08-08 17:52:17.827 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:52:17.828 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:52:47.829 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:52:47.829 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:53:17.840 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:53:17.840 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:53:47.853 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:53:47.853 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:54:17.861 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:54:17.861 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:54:47.870 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:54:47.870 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:55:17.883 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:55:17.883 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2025-08-08 17:55:23.216 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-08 17:55:23.236 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-08-08 17:55:23.250 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-08 17:55:23.250 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2025-08-08 17:55:23.254 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@42c55978: (connection evicted)
+2025-08-08 17:55:23.261 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7e6892ef: (connection evicted)
+2025-08-08 17:55:23.264 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@a1b2d31: (connection evicted)
+2025-08-08 17:55:23.264 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@392f1e35: (connection evicted)
+2025-08-08 17:55:23.265 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5f0b53f5: (connection evicted)
+2025-08-08 17:55:23.266 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@45d26c3e: (connection evicted)
+2025-08-08 17:55:23.267 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@58121d1a: (connection evicted)
+2025-08-08 17:55:23.268 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6ff46a15: (connection evicted)
+2025-08-08 17:55:23.269 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@606e353b: (connection evicted)
+2025-08-08 17:55:23.269 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@71eb72ff: (connection evicted)
+2025-08-08 17:55:23.271 [SpringApplicationShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-08-08 17:55:23.271 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -2,6 +2,7 @@ package com.redeemer150.CodeGenius.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.spring.service.impl.ServiceImpl;
@@ -170,8 +171,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String sortField = userQueryRequest.getSortField();
         String sortOrder = userQueryRequest.getSortOrder();
         return QueryWrapper.create()
-                .eq("id", id) // where id = ${id}
-                .eq("userRole", userRole) // and userRole = ${userRole}
+                .eq("id", id) 
+                .eq("userRole", userRole)
                 .like("userAccount", userAccount)
                 .like("userName", userName)
                 .like("userProfile", userProfile)

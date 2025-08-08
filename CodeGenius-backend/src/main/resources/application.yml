@@ -19,6 +19,7 @@ spring:
       port: 6379
       password:
       ttl: 3600
+      database: 0
   profiles:
     active: local
 server:
@@ -29,6 +30,13 @@ server:
     session:
       cookie:
         max-age: 2592000
+# MyBatis-Flex 配置
+mybatis-flex:
+  # 打印SQL语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    # 驼峰命名转换
+    map-underscore-to-camel-case: true
 # springdoc-openapi
 springdoc:
   group-configs:
@@ -59,3 +67,14 @@ langchain4j:
       max-tokens: 8192
       log-requests: true
       log-responses: true
+logging:
+  level:
+    root: info
+    # MyBatis-Flex SQL日志输出
+    com.mybatisflex: debug
+    # 你的项目包路径的日志输出
+    com.redeemer150.CodeGenius: debug
+    # SQL执行日志
+    org.springframework.jdbc: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
