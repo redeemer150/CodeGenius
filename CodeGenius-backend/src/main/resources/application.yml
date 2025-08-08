@@ -34,7 +34,7 @@ springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: com.redeemer150.yuaicodemother.controller
+      packages-to-scan: com.redeemer150.CodeGenius.controller
 # knife4j
 knife4j:
   enable: true

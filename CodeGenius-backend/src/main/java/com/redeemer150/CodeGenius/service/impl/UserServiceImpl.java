@@ -28,7 +28,7 @@ import static com.redeemer150.CodeGenius.constant.UserConstant.USER_LOGIN_STATE;
 /**
  * 用户 服务层实现。
  *
- * @author <a href="https://github.com/liredeemer150">程序员鱼皮</a>
+ * @author <a href="https://github.com/redeemer150">程序员鱼皮</a>
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
