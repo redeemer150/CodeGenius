@@ -3,8 +3,8 @@
     <div class="login-card">
       <div class="login-header">
         <img src="@/assets/透明logo.png" alt="Logo" class="logo" />
-        <h1 class="login-title">CodeGenius</h1>
-        <p class="login-subtitle">欢迎回来，请登录您的账户</p>
+        <h1 class="login-title">{{ $t('app.title') }}</h1>
+        <p class="login-subtitle">{{ $t('app.welcome') }}</p>
       </div>
 
       <a-form
@@ -17,19 +17,19 @@
         @finishFailed="onFinishFailed"
         class="login-form"
       >
-        <a-form-item name="userAccount" :rules="[{ required: true, message: '请输入您的账号' }]">
+        <a-form-item name="userAccount" :rules="[{ required: true, message: $t('validation.accountRequired') }]">
           <a-input
             v-model:value="formState.userAccount"
-            placeholder="用户名"
+            :placeholder="$t('user.account')"
             size="large"
             class="login-input"
           />
         </a-form-item>
 
-        <a-form-item name="userPassword" :rules="[{ required: true, message: '请输入您的密码' }]">
+        <a-form-item name="userPassword" :rules="[{ required: true, message: $t('validation.passwordRequired') }]">
           <a-input-password
             v-model:value="formState.userPassword"
-            placeholder="密码"
+            :placeholder="$t('user.password')"
             size="large"
             class="login-input"
           />
@@ -38,21 +38,21 @@
         <a-form-item class="form-options">
           <div class="options-wrapper">
             <a-checkbox v-model:checked="formState.remember" class="remember-checkbox">
-              记住我
+              {{ $t('user.rememberMe') }}
             </a-checkbox>
-            <a href="#" class="forgot-password">忘记密码？</a>
+            <a href="#" class="forgot-password">{{ $t('user.forgotPassword') }}</a>
           </div>
         </a-form-item>
 
         <a-form-item class="submit-wrapper">
           <a-button type="primary" html-type="submit" size="large" block class="login-button">
-            登录
+            {{ $t('user.login') }}
           </a-button>
         </a-form-item>
 
         <div class="register-link">
-          还没有账户？
-          <a-button type="link" class="register-button" @click="goToRegister"> 立即注册 </a-button>
+          {{ $t('user.noAccount') }}
+          <a-button type="link" class="register-button" @click="goToRegister">{{ $t('user.registerNow') }}</a-button>
         </div>
       </a-form>
     </div>
@@ -62,11 +62,13 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import { userLogin } from '@/api/userController.ts'
+import { useI18n } from 'vue-i18n'
+import { userLogin } from '../../api/userController'
 import { message } from 'ant-design-vue'
-import { useLoginUserStore } from '@/stores/loginUser.ts'
+import { useLoginUserStore } from '../../stores/loginUser'
 
 const router = useRouter()
+const { t } = useI18n()
 const loginUserStore = useLoginUserStore()
 
 interface FormState {

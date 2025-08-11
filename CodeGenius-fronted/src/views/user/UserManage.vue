@@ -2,55 +2,55 @@
   <div class="user-manage-container">
     <!-- 页面标题和操作区域 -->
     <div class="page-header">
-      <h1 class="page-title">用户管理</h1>
+      <h1 class="page-title">{{ $t('userManage.title') }}</h1>
       <div class="header-actions">
         <a-button type="primary" @click="showAddModal">
           <plus-outlined />
-          添加用户
+          {{ $t('userManage.addUser') }}
         </a-button>
         <a-button @click="refreshData">
           <reload-outlined />
-          刷新
+          {{ $t('common.refresh') }}
         </a-button>
       </div>
     </div>
 
-    <!-- 搜索表单 -->
+        <!-- 搜索表单 -->
     <div class="search-form">
       <a-form layout="inline" :model="searchForm" @finish="handleSearch">
-        <a-form-item label="用户名" name="userName">
-          <a-input
-            v-model:value="searchForm.userName"
-            placeholder="请输入用户名"
+        <a-form-item :label="$t('user.username')" name="userName">
+          <a-input 
+            v-model:value="searchForm.userName" 
+            :placeholder="$t('userManage.searchByName')" 
             allow-clear
             style="width: 180px"
           />
         </a-form-item>
-        <a-form-item label="账号" name="userAccount">
-          <a-input
-            v-model:value="searchForm.userAccount"
-            placeholder="请输入账号"
+        <a-form-item :label="$t('user.account')" name="userAccount">
+          <a-input 
+            v-model:value="searchForm.userAccount" 
+            :placeholder="$t('userManage.searchByAccount')" 
             allow-clear
             style="width: 180px"
           />
         </a-form-item>
-        <a-form-item label="角色" name="userRole">
-          <a-select
-            v-model:value="searchForm.userRole"
-            placeholder="请选择角色"
+        <a-form-item :label="$t('user.role')" name="userRole">
+          <a-select 
+            v-model:value="searchForm.userRole" 
+            :placeholder="$t('userManage.selectRole')"
             allow-clear
             style="width: 120px"
           >
-            <a-select-option value="user">普通用户</a-select-option>
-            <a-select-option value="admin">管理员</a-select-option>
+            <a-select-option value="user">{{ $t('role.user') }}</a-select-option>
+            <a-select-option value="admin">{{ $t('role.admin') }}</a-select-option>
           </a-select>
         </a-form-item>
         <a-form-item>
           <a-button type="primary" html-type="submit" :loading="loading">
             <search-outlined />
-            搜索
+            {{ $t('common.search') }}
           </a-button>
-          <a-button @click="resetSearch" style="margin-left: 8px"> 重置 </a-button>
+          <a-button @click="resetSearch" style="margin-left: 8px">{{ $t('common.reset') }}</a-button>
         </a-form-item>
       </a-form>
     </div>
@@ -89,22 +89,22 @@
             {{ formatDateTime(record.createTime) }}
           </template>
 
-          <!-- 操作列 -->
+                    <!-- 操作列 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
               <a-button type="link" size="small" @click="handleEdit(record)">
                 <edit-outlined />
-                编辑
+                {{ $t('common.edit') }}
               </a-button>
-              <a-button
-                type="link"
-                size="small"
-                danger
+              <a-button 
+                type="link" 
+                size="small" 
+                danger 
                 @click="handleDelete(record)"
                 :disabled="record.userRole === 'admin' && record.id === currentUser?.id"
               >
                 <delete-outlined />
-                删除
+                {{ $t('common.delete') }}
               </a-button>
             </a-space>
           </template>
@@ -115,7 +115,7 @@
     <!-- 用户编辑/添加弹窗 -->
     <a-modal
       v-model:open="modalVisible"
-      :title="modalType === 'add' ? '添加用户' : '编辑用户'"
+      :title="modalType === 'add' ? $t('userManage.addUser') : $t('userManage.editUser')"
       @ok="handleModalOk"
       @cancel="handleModalCancel"
       :confirm-loading="modalLoading"
@@ -127,45 +127,45 @@
         :label-col="{ span: 6 }"
         :wrapper-col="{ span: 18 }"
       >
-        <a-form-item
-          label="用户名"
+                <a-form-item
+          :label="$t('user.username')"
           name="userName"
-          :rules="[{ required: true, message: '请输入用户名' }]"
+          :rules="[{ required: true, message: $t('validation.usernameRequired') }]"
         >
-          <a-input v-model:value="userForm.userName" placeholder="请输入用户名" />
+          <a-input v-model:value="userForm.userName" :placeholder="$t('validation.usernameRequired')" />
         </a-form-item>
-
+        
         <a-form-item
-          label="账号"
+          :label="$t('user.account')"
           name="userAccount"
           :rules="[
-            { required: true, message: '请输入账号' },
-            { min: 4, message: '账号长度至少4位' },
+            { required: true, message: $t('validation.accountRequired') },
+            { min: 4, message: $t('validation.accountMinLength') },
           ]"
         >
-          <a-input
-            v-model:value="userForm.userAccount"
-            placeholder="请输入账号"
+          <a-input 
+            v-model:value="userForm.userAccount" 
+            :placeholder="$t('validation.accountRequired')"
             :disabled="modalType === 'edit'"
           />
         </a-form-item>
-
-        <a-form-item label="头像" name="userAvatar">
-          <a-input v-model:value="userForm.userAvatar" placeholder="请输入头像URL" />
+        
+        <a-form-item :label="$t('user.avatar')" name="userAvatar">
+          <a-input v-model:value="userForm.userAvatar" :placeholder="$t('user.avatar')" />
         </a-form-item>
-
-        <a-form-item label="个人简介" name="userProfile">
-          <a-textarea v-model:value="userForm.userProfile" placeholder="请输入个人简介" :rows="3" />
+        
+        <a-form-item :label="$t('user.profile')" name="userProfile">
+          <a-textarea v-model:value="userForm.userProfile" :placeholder="$t('user.profile')" :rows="3" />
         </a-form-item>
-
+        
         <a-form-item
-          label="角色"
+          :label="$t('user.role')"
           name="userRole"
-          :rules="[{ required: true, message: '请选择角色' }]"
+          :rules="[{ required: true, message: $t('validation.roleRequired') }]"
         >
-          <a-select v-model:value="userForm.userRole" placeholder="请选择角色">
-            <a-select-option value="user">普通用户</a-select-option>
-            <a-select-option value="admin">管理员</a-select-option>
+          <a-select v-model:value="userForm.userRole" :placeholder="$t('validation.roleRequired')">
+            <a-select-option value="user">{{ $t('role.user') }}</a-select-option>
+            <a-select-option value="admin">{{ $t('role.admin') }}</a-select-option>
           </a-select>
         </a-form-item>
       </a-form>
@@ -176,6 +176,7 @@
 <script lang="ts" setup>
 import { ref, reactive, onMounted, computed } from 'vue'
 import { message, Modal } from 'ant-design-vue'
+import { useI18n } from 'vue-i18n'
 import type { TableColumnsType, TableProps } from 'ant-design-vue'
 import {
   PlusOutlined,
@@ -185,12 +186,15 @@ import {
   EditOutlined,
   DeleteOutlined,
 } from '@ant-design/icons-vue'
-import { listUserVoByPage, addUser, updateUser, deleteUser } from '@/api/userController.ts'
-import { useLoginUserStore } from '@/stores/loginUser.ts'
+import { listUserVoByPage, addUser, updateUser, deleteUser } from '../../api/userController'
+import { useLoginUserStore } from '../../stores/loginUser'
 
 // 登录用户信息
 const loginUserStore = useLoginUserStore()
 const currentUser = computed(() => loginUserStore.loginUser)
+
+// 国际化
+const { t } = useI18n()
 
 // 响应式数据
 const loading = ref(false)
@@ -226,69 +230,69 @@ const paginationConfig = reactive({
   total: 0,
   showSizeChanger: true,
   showQuickJumper: true,
-  showTotal: (total: number) => `共 ${total} 条数据`,
+  showTotal: (total: number) => t('pagination.total', { total }),
   pageSizeOptions: ['10', '20', '50', '100'],
 })
 
 // 表格列配置
-const columns: TableColumnsType = [
+const columns = computed<TableColumnsType>(() => [
   {
-    title: 'ID',
+    title: t('userManage.id'),
     dataIndex: 'id',
     key: 'id',
     width: 80,
     sorter: true,
   },
   {
-    title: '头像',
+    title: t('userManage.userAvatar'),
     dataIndex: 'userAvatar',
     key: 'userAvatar',
     width: 80,
     align: 'center',
   },
   {
-    title: '用户名',
+    title: t('userManage.userName'),
     dataIndex: 'userName',
     key: 'userName',
     width: 120,
     ellipsis: true,
   },
   {
-    title: '账号',
+    title: t('userManage.userAccount'),
     dataIndex: 'userAccount',
     key: 'userAccount',
     width: 150,
     ellipsis: true,
   },
   {
-    title: '个人简介',
+    title: t('userManage.userProfile'),
     dataIndex: 'userProfile',
     key: 'userProfile',
     width: 200,
     ellipsis: true,
   },
   {
-    title: '角色',
+    title: t('userManage.userRole'),
     dataIndex: 'userRole',
     key: 'userRole',
     width: 100,
     align: 'center',
   },
   {
-    title: '创建时间',
+    title: t('common.createTime'),
     dataIndex: 'createTime',
     key: 'createTime',
     width: 160,
     sorter: true,
   },
   {
-    title: '操作',
+    title: t('common.operation'),
     key: 'action',
     width: 120,
     fixed: 'right',
     align: 'center',
   },
-]
+])
 
 // 获取用户列表
 const fetchUserList = async () => {
@@ -302,11 +306,11 @@ const fetchUserList = async () => {
       paginationConfig.pageSize = pageSize || 10
       paginationConfig.total = totalRow || 0
     } else {
-      message.error(response.data.message || '获取用户列表失败')
+      message.error(response.data.message || t('userManage.fetchListFailed'))
     }
   } catch (error) {
     console.error('获取用户列表失败:', error)
-    message.error('获取用户列表失败')
+    message.error(t('userManage.fetchListFailed'))
   } finally {
     loading.value = false
   }
@@ -394,23 +398,23 @@ const handleEdit = (record: any) => {
 // 删除用户
 const handleDelete = (record: any) => {
   Modal.confirm({
-    title: '确认删除',
-    content: `确定要删除用户 "${record.userName}" 吗？此操作不可恢复。`,
-    okText: '确定',
-    cancelText: '取消',
+    title: t('userManage.confirmDelete'),
+    content: t('userManage.deleteConfirmText', { userName: record.userName }),
+    okText: t('common.confirm'),
+    cancelText: t('common.cancel'),
     okType: 'danger',
     onOk: async () => {
       try {
         const response = await deleteUser({ id: record.id })
         if (response.data.code === 0) {
-          message.success('删除成功')
+          message.success(t('userManage.deleteSuccess'))
           await fetchUserList()
         } else {
-          message.error(response.data.message || '删除失败')
+          message.error(response.data.message || t('userManage.operationFailed'))
         }
       } catch (error) {
         console.error('删除用户失败:', error)
-        message.error('删除失败')
+        message.error(t('userManage.operationFailed'))
       }
     },
   })
@@ -430,15 +434,15 @@ const handleModalOk = async () => {
     }
 
     if (response.data.code === 0) {
-      message.success(modalType.value === 'add' ? '添加成功' : '更新成功')
+      message.success(modalType.value === 'add' ? t('userManage.addSuccess') : t('userManage.updateSuccess'))
       modalVisible.value = false
       await fetchUserList()
     } else {
-      message.error(response.data.message || '操作失败')
+      message.error(response.data.message || t('userManage.operationFailed'))
     }
   } catch (error) {
     console.error('用户操作失败:', error)
-    message.error('操作失败')
+    message.error(t('userManage.operationFailed'))
   } finally {
     modalLoading.value = false
   }
@@ -454,11 +458,11 @@ const handleModalCancel = () => {
 const getRoleText = (role?: string) => {
   switch (role) {
     case 'admin':
-      return '管理员'
+      return t('role.admin')
     case 'user':
-      return '普通用户'
+      return t('role.user')
     default:
-      return '未知'
+      return t('role.unknown')
   }
 }
 

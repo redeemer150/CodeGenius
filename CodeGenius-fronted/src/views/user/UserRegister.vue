@@ -3,8 +3,8 @@
     <div class="register-card">
       <div class="register-header">
         <img src="@/assets/透明logo.png" alt="Logo" class="logo" />
-        <h1 class="register-title">CodeGenius</h1>
-        <p class="register-subtitle">创建您的账户，开始使用我们的服务</p>
+        <h1 class="register-title">{{ $t('app.title') }}</h1>
+        <p class="register-subtitle">{{ $t('app.createAccount') }}</p>
       </div>
 
       <a-form
@@ -100,11 +100,13 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import type { Rule } from 'ant-design-vue/es/form'
-import { userRegister } from '@/api/userController.ts'
+import { userRegister } from '../../api/userController'
 import { message } from 'ant-design-vue'
 
 const router = useRouter()
+const { t } = useI18n()
 
 interface FormState {
   userAccount: string

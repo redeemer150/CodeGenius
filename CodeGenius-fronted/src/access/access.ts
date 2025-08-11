@@ -1,4 +1,4 @@
-import { useLoginUserStore } from '@/stores/loginUser'
+import { useLoginUserStore } from '@/stores/loginUser.ts'
 import { message } from 'ant-design-vue'
 import router from '@/router'
 
@@ -21,8 +21,11 @@ router.beforeEach(async (to, from, next) => {
   if (toUrl.startsWith('/admin')) {
     if (!loginUser || loginUser.userRole !== 'admin') {
       message.error('没有权限')
-      next(`/user/login?redirect=${to.fullPath}`)
-      return
+      if(loginUser.userName === '未登录'){
+        next(`/user/login?redirect=${to.fullPath}`)
+        message.error('请先登录')
+      }else
+        next('/?redirect=${to.fullPath}')
     }
   }
   next()
